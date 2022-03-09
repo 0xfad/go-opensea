@@ -15,19 +15,19 @@ type Asset struct {
 }
 
 type AssetContract struct {
-	Address              string        `json:"address"`
-	AssetContractType    string        `json:"asset_contract_type"`
-	BuyerFeeBasisPoints  float64       `json:"buyer_fee_basis_points"`
-	SellerFeeBasisPoints float64       `json:"eller_fee_basis_points"`
-	CreatedDate          *CreationDate `json:"created_date"`
-	Description          string        `json:"description"`
-	ExternalLink         string        `json:"external_link"`
-	ImageURL             string        `json:"image_url"`
-	Name                 string        `json:"name"`
-	PayoutAddress        string        `json:"payout_address"`
-	Owner                int64         `json:"owner"`
-	SchemaName           string        `json:"schema_name"`
-	Symbol               string        `json:"symbol"`
+	Address              string  `json:"address"`
+	AssetContractType    string  `json:"asset_contract_type"`
+	BuyerFeeBasisPoints  float64 `json:"buyer_fee_basis_points"`
+	SellerFeeBasisPoints float64 `json:"eller_fee_basis_points"`
+	CreatedDate          string  `json:"created_date"`
+	Description          string  `json:"description"`
+	ExternalLink         string  `json:"external_link"`
+	ImageURL             string  `json:"image_url"`
+	Name                 string  `json:"name"`
+	PayoutAddress        string  `json:"payout_address"`
+	Owner                int64   `json:"owner"`
+	SchemaName           string  `json:"schema_name"`
+	Symbol               string  `json:"symbol"`
 }
 
 type AssetTrait struct {

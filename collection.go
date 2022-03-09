@@ -6,7 +6,7 @@ type Collection struct {
 	Editors               []string        `json:"editors"`
 	Hidden                bool            `json:"hidden"`
 	Featured              bool            `json:"featured"`
-	CreatedDate           *CreationDate   `json:"created_date"`
+	CreatedDate           string          `json:"created_date"`
 	Description           string          `json:"description"`
 	ImageURL              string          `json:"image_url"`
 	BuyerFeeBasisPoints   string          `json:"opensea_buyer_fee_basis_points"`
