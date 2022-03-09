@@ -7,6 +7,7 @@ import (
 	"io"
 	"net/http"
 	"net/url"
+	"strconv"
 )
 
 const (
@@ -87,7 +88,13 @@ func (o *Opensea) GetSingleCollection(name string) (*SingleCollectionResponse, e
 }
 
 func (o Opensea) GetAssets(collectionName string, limit, offset int) (*AssetListResponse, error) {
-	req, err := o.buildRequest(http.MethodGet, "/assets", nil)
+	req, err := o.buildRequest(http.MethodGet, "/assets", map[string]string{
+		"collection":      collectionName,
+		"limit":           strconv.Itoa(limit),
+		"offset":          strconv.Itoa(offset),
+		"order_by":        "pk",
+		"order_direction": "asc",
+	})
 	if err != nil {
 		return nil, err
 	}
