@@ -8,10 +8,17 @@ type Asset struct {
 	Description  string        `json:"description"`
 	ExternalLink string        `json:"external_link"`
 	Contract     AssetContract `json:"asset_contract"`
+	SellOrders   []AssetOrder  `json:"sell_orders,omitempty"`
 	Permalink    string        `json:"permalink"`
 	Owner        Account       `json:"owner"`
 	Creator      Account       `json:"creator"`
 	Traits       []AssetTrait  `json:"traits"`
+}
+
+type AssetOrder struct {
+	CreatedDate  string `json:"created_date"`
+	CurrentPrice string `json:"current_price"`
+	HowToCall    int    `json:"how_to_call"`
 }
 
 type AssetContract struct {
