@@ -94,6 +94,7 @@ func (o Opensea) GetAssets(collectionName string, limit, offset int) (*AssetList
 		"offset":          strconv.Itoa(offset),
 		"order_by":        "pk",
 		"order_direction": "asc",
+		"include_orders":  "true",
 	})
 	if err != nil {
 		return nil, err
